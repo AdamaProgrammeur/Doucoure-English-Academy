@@ -1,0 +1,45 @@
+ {% extends "base.html" %}
+
+ {% block navCours %}
+    {% include "navCours.html" %}
+ {% endblock navCours %}
+
+ {% block coursList %}
+
+<!-- acceuil.html -->
+<h2>Liste des Cours</h2>
+
+<table border="1" cellpadding="10" cellspacing="0">
+    <thead>
+        <tr>
+            <th>Titre</th>
+            <th>Description</th>
+            <th>Niveau</th>
+            <th>Date de début</th>
+            <th>Date de fin</th>
+            <th>duree_heures</th>
+            <th>enseignant</th>
+            <th>niveau</th>
+            <th>prix</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for c in cours%}
+        <tr>
+            <td>{{ c.titre }}</td>
+            <td>{{ c.description }}</td>
+            <td>{{ c.niveau }}</td>
+            <td>{{ c.date_debut }}</td>
+            <td>{{ c.date_fin }}</td>
+            <td>{{duree_heures}}</td>
+            <td>enseignant</td>
+            <td>niveau</td>
+            <td>prix</td>
+        </tr>
+        {% endfor %}
+        {% endblock coursList %}
+        
+    
+    </tbody>
+</table>
+
