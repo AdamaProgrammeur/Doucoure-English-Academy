@@ -3,7 +3,9 @@ from .models import Cours
 # Create your views here
 
 def acceuil(request):
-    return render(request, 'acceuil.html')
+    myList = [34,50,10,90]
+    nom = "Adama doucoure"
+    return render(request, 'acceuil.html', {'list':myList})
 
 def course(request):
      cours = Cours.objects.all()
